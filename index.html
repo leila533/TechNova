@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechNova Solutions</title>
+
+  <!--
+    =====================================================
+    FONTES — Google Fonts
+    Playfair Display : títulos com personalidade
+    Nunito           : corpo do texto, leve e legível
+    =====================================================
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <!--
+    =====================================================
+    FRAMEWORK W3.CSS 
+    Usado para: w3-animate-opacity nos slides,
+    classes utilitárias de layout e espaçamento.
+    =====================================================
+  -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+
+  <!--
+    =====================================================
+    FONT AWESOME — ícones do sidebar e rodapé
+    =====================================================
+  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+
+<!-- =====================================================
+     SIDEBAR — barra lateral de navegação
+     Inclui ícone de SERVIÇOS / PRODUTOS (obrigatório)
+===================================================== -->
+<nav class="sidebar">
+
+  <!-- Logo / nome da empresa -->
+  <div class="sidebar-logo">
+    <i class="fa-solid fa-seedling" style="font-size:1.8rem;color:#e8c87a;"></i>
+    <span>TechNova</span>
+    <small>Solutions</small>
+  </div>
+
+  <!-- Links de navegação -->
+  <a href="#" onclick="return mostrarSecao('home')" id="menu-home">
+    <i class="fa-solid fa-house"></i>
+    <span>Início</span>
+  </a>
+
+  <a href="#" onclick="return mostrarSecao('sobre')" id="menu-sobre">
+    <i class="fa-solid fa-circle-info"></i>
+    <span>Sobre Nós</span>
+  </a>
+
+  <!-- Ícone SERVIÇOS / PRODUTOS — obrigatório pela Agenda 16 -->
+  <a href="#" onclick="return mostrarSecao('servicos')" id="menu-servicos">
+    <i class="fa-solid fa-cubes"></i>
+    <span>Serviços / Produtos</span>
+  </a>
+
+  <a href="#" onclick="return mostrarSecao('contato')" id="menu-contato">
+    <i class="fa-solid fa-envelope"></i>
+    <span>Contato</span>
+  </a>
+
+  <a href="#" onclick="return mostrarSecao('ia')" id="menu-ia">
+    <i class="fa-solid fa-robot"></i>
+    <span>Consulta IA</span>
+  </a>
+
+</nav>
+
+
+<!-- =====================================================
+     CONTEÚDO PRINCIPAL
+===================================================== -->
+<main class="conteudo">
+
+  <!-- ───────── SEÇÃO: HOME ───────────────────────── -->
+  <section class="secao ativa" id="home">
+    <div class="hero">
+      <div class="hero-inner">
+        <p class="hero-tag">Tecnologia com propósito</p>
+        <h1 class="hero-titulo">
+          Soluções digitais<br>para o seu <em>negócio crescer</em>
+        </h1>
+        <p class="hero-sub">
+          Desenvolvemos sistemas web, aplicamos segurança digital e
+          entregamos infraestrutura em nuvem com foco em resultado real.
+          Desde 2018, ao lado de empresas que querem crescer.
+        </p>
+        <button class="btn-primario" onclick="mostrarSecao('servicos')">
+          Conheça nossos serviços
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ───────── SEÇÃO: SOBRE ──────────────────────── -->
+  <section class="secao" id="sobre">
+    <div class="w3-padding-64" style="padding: 80px 70px;">
+
+      <h2 class="sec-titulo">Sobre Nós</h2>
+      <div class="sec-linha"></div>
+
+      <div class="sobre-grid">
+        <div class="sobre-texto">
+          <p>
+            A <strong>TechNova Solutions</strong> nasceu da vontade de fazer
+            tecnologia de verdade — sem jargão complicado, sem promessa vazia.
+            Nossa equipe combina design, engenharia e estratégia para entregar
+            projetos que funcionam no mundo real.
+          </p>
+          <p>
+            Atuamos em desenvolvimento web, infraestrutura em nuvem, análise
+            de dados e cibersegurança. Cada projeto começa com uma conversa honesta
+            sobre o que o cliente precisa — e termina com algo que ele realmente usa.
+          </p>
+          <p>
+            Nossa missão: <em>"Inovar sem parar, entregar com excelência."</em>
+          </p>
+        </div>
+
+        <div class="numeros">
+          <div class="numero-item w3-card-2">
+            <span class="numero-valor">8+</span>
+            <span class="numero-label">Anos de mercado</span>
+          </div>
+          <div class="numero-item w3-card-2">
+            <span class="numero-valor">320</span>
+            <span class="numero-label">Projetos entregues</span>
+          </div>
+          <div class="numero-item w3-card-2">
+            <span class="numero-valor">95%</span>
+            <span class="numero-label">Clientes satisfeitos</span>
+          </div>
+          <div class="numero-item w3-card-2">
+            <span class="numero-valor">24/7</span>
+            <span class="numero-label">Suporte técnico</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ───────── SEÇÃO: SERVIÇOS / PRODUTOS ────────── -->
+  <section class="secao" id="servicos">
+
+    <!-- Cabeçalho: logotipo, nome e slogan da empresa -->
+    <header class="servicos-cabecalho">
+      <div class="logo-icone">
+        <i class="fa-solid fa-seedling"></i>
+      </div>
+      <div>
+        <h1>TechNova Solutions</h1>
+        <p class="slogan">"Inovar sem parar, entregar com excelência."</p>
+      </div>
+    </header>
+
+    <!-- Área principal: slideshow de serviços e produtos -->
+    <div class="slideshow-area">
+      <h2>Serviços &amp; Produtos</h2>
+      <p>Navegue pelos cards para conhecer o que oferecemos.</p>
+
+      <!--
+        Container do slideshow — usa W3.CSS:
+        w3-card-2     = sombra leve e borda
+        w3-animate-opacity = transição de opacidade em cada slide
+      -->
+      <div class="slide-container w3-card-2" id="containerSlide">
+
+        <!-- SLIDE 1 — Desenvolvimento Web -->
+        <div class="slide w3-animate-opacity">
+          <span class="slide-num">01 / 04</span>
+          <div class="slide-corpo">
+            <div class="slide-visual cor-dourado">
+              <i class="fa-solid fa-code"></i>
+              <span>Desenvolvimento</span>
+            </div>
+            <div class="slide-texto">
+              <p class="slide-categoria">Serviço</p>
+              <h3 class="slide-titulo">Desenvolvimento Web Full-Stack</h3>
+              <p class="slide-descricao">
+                Criamos sistemas web responsivos e robustos com React, Node.js
+                e Python. Do layout ao banco de dados, entregamos projetos
+                completos com código limpo e documentado.
+              </p>
+              <p class="slide-preco">
+                A partir de R$ 3.500
+                <small>por projeto · orçamento personalizado</small>
+              </p>
+            </div>
+          </div>
+        </div><!-- /slide 1 -->
+
+        <!-- SLIDE 2 — Cloud e DevOps -->
+        <div class="slide w3-animate-opacity">
+          <span class="slide-num">02 / 04</span>
+          <div class="slide-corpo">
+            <div class="slide-visual cor-verde">
+              <i class="fa-solid fa-cloud"></i>
+              <span>Cloud &amp; DevOps</span>
+            </div>
+            <div class="slide-texto">
+              <p class="slide-categoria">Serviço</p>
+              <h3 class="slide-titulo">Infraestrutura em Nuvem</h3>
+              <p class="slide-descricao">
+                Configuramos e gerenciamos ambientes AWS, Azure e Google Cloud.
+                Pipelines CI/CD, containers Docker e Kubernetes para
+                máxima disponibilidade e escalabilidade.
+              </p>
+              <p class="slide-preco">
+                A partir de R$ 1.800/mês
+                <small>plano mensal · monitoramento 24/7 incluso</small>
+              </p>
+            </div>
+          </div>
+        </div><!-- /slide 2 -->
+
+        <!-- SLIDE 3 — Cibersegurança -->
+        <div class="slide w3-animate-opacity">
+          <span class="slide-num">03 / 04</span>
+          <div class="slide-corpo">
+            <div class="slide-visual cor-roxo">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>Segurança</span>
+            </div>
+            <div class="slide-texto">
+              <p class="slide-categoria">Serviço</p>
+              <h3 class="slide-titulo">Cibersegurança &amp; Pentest</h3>
+              <p class="slide-descricao">
+                Auditoria de segurança, testes de intrusão e análise de
+                vulnerabilidades. Proteja os dados da sua empresa e garanta
+                conformidade com a LGPD.
+              </p>
+              <p class="slide-preco">
+                A partir de R$ 4.200
+                <small>por ciclo de auditoria · relatório detalhado</small>
+              </p>
+            </div>
+          </div>
+        </div><!-- /slide 3 -->
+
+        <!-- SLIDE 4 — Business Intelligence -->
+        <div class="slide w3-animate-opacity">
+          <span class="slide-num">04 / 04</span>
+          <div class="slide-corpo">
+            <div class="slide-visual cor-azul">
+              <i class="fa-solid fa-chart-line"></i>
+              <span>Analytics</span>
+            </div>
+            <div class="slide-texto">
+              <p class="slide-categoria">Produto</p>
+              <h3 class="slide-titulo">Business Intelligence &amp; Dados</h3>
+              <p class="slide-descricao">
+                Dashboards interativos com Power BI e Tableau, modelagem de
+                dados e integração com múltiplas fontes. Transformamos
+                números em decisões estratégicas.
+              </p>
+              <p class="slide-preco">
+                A partir de R$ 2.900
+                <small>implantação + treinamento da equipe inclusos</small>
+              </p>
+            </div>
+          </div>
+        </div><!-- /slide 4 -->
+
+        <!-- Botões anterior / próximo (estilizados no estilo.css) -->
+        <button class="btn-slide anterior w3-button" onclick="mudarSlide(-1)" title="Slide anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <button class="btn-slide proximo w3-button" onclick="mudarSlide(1)" title="Próximo slide">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+      </div><!-- /slide-container -->
+
+      <!-- Dots indicadores -->
+      <div class="dots">
+        <button class="dot ativo" onclick="irParaSlide(0)" title="Slide 1" aria-label="Ir para slide 1"></button>
+        <button class="dot"       onclick="irParaSlide(1)" title="Slide 2" aria-label="Ir para slide 2"></button>
+        <button class="dot"       onclick="irParaSlide(2)" title="Slide 3" aria-label="Ir para slide 3"></button>
+        <button class="dot"       onclick="irParaSlide(3)" title="Slide 4" aria-label="Ir para slide 4"></button>
+      </div>
+
+      <!-- Controles automático / manual -->
+      <div class="controles-slide">
+        <button class="btn-ctrl" id="btn-auto" onclick="alternarAuto()">
+          <i class="fa-solid fa-play" id="icone-auto"></i>
+          <span id="texto-auto">Automático</span>
+        </button>
+        <button class="btn-ctrl" onclick="mudarSlide(-1)">
+          <i class="fa-solid fa-backward-step"></i> Anterior
+        </button>
+        <button class="btn-ctrl" onclick="mudarSlide(1)">
+          Próximo <i class="fa-solid fa-forward-step"></i>
+        </button>
+      </div>
+
+    </div><!-- /slideshow-area -->
+
+    <!--
+      Rodapé da seção Serviços / Produtos
+      Contém: e-mail comercial, telefone e redes sociais com ícones e hiperlinks
+    -->
+    <footer class="servicos-rodape">
+      <div class="rodape-contato">
+        <span>
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:contato@technovasolutions.com.br">contato@technovasolutions.com.br</a>
+        </span>
+        <span>
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+551140028922">(11) 4002-8922</a>
+        </span>
+      </div>
+
+      <!-- Redes sociais: ícones Font Awesome + hiperlinks -->
+      <div class="redes-sociais">
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com" target="_blank" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://wa.me/5511940028922" target="_blank" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </footer>
+
+  </section><!-- /servicos -->
+
+
+  <!-- ───────── SEÇÃO: CONTATO ────────────────────── -->
+  <section class="secao" id="contato">
+    <div style="padding: 80px 70px; background:#fff;">
+
+      <h2 class="sec-titulo">Contato</h2>
+      <div class="sec-linha"></div>
+
+      <div class="contato-grid">
+        <!-- Dados de contato -->
+        <div>
+          <div class="info-contato-item">
+            <div class="info-icone"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <p class="info-rotulo">E-mail</p>
+              <p class="info-valor">
+                <a href="mailto:contato@technovasolutions.com.br">contato@technovasolutions.com.br</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="info-contato-item">
+            <div class="info-icone"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <p class="info-rotulo">Telefone</p>
+              <p class="info-valor"><a href="tel:+551140028922">(11) 4002-8922</a></p>
+            </div>
+          </div>
+
+          <div class="info-contato-item">
+            <div class="info-icone"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <p class="info-rotulo">Endereço</p>
+              <p class="info-valor">Av. Paulista, 1000 — Sala 42<br>São Paulo – SP</p>
+            </div>
+          </div>
+
+          <div class="redes-sociais" style="margin-top: 8px;">
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://linkedin.com"  target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com"    target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://youtube.com"   target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/5511940028922" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Formulário de contato -->
+        <div>
+          <div class="grupo-campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Leila"/>
+          </div>
+          <div class="grupo-campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Suporte@email.com"/>
+          </div>
+          <div class="grupo-campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" placeholder="Como podemos ajudar?"></textarea>
+          </div>
+          <button class="btn-enviar">
+            Enviar mensagem &nbsp;<i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ───────── SEÇÃO: CONSULTA IA ────────────────── -->
+  <section class="secao" id="ia">
+    <div style="padding: 80px 70px;">
+
+      <h2 class="sec-titulo">Consulta à IA</h2>
+      <div class="sec-linha"></div>
+      <p class="w3-text-gray" style="margin-bottom:36px;font-size:0.9rem;">
+        Registro das três consultas feitas à Inteligência Artificial como
+        apoio técnico no desenvolvimento desta atividade.
+      </p>
+
+      <!-- Pergunta 1 -->
+      <div class="ia-pergunta">
+        <h3>
+          <i class="fa-solid fa-circle-question"></i>
+          Qual é a importância do recurso slideshow numa página web?
+        </h3>
+        <ul>
+          <li>Permite mostrar vários produtos ou serviços em um espaço reduzido, sem poluir o layout da página.</li>
+          <li>Atrai a atenção do visitante por meio de animação e movimento, tornando a navegação mais dinâmica.</li>
+          <li>Melhora o engajamento: páginas com conteúdo visual rotativo tendem a ter menor taxa de rejeição.</li>
+          <li>Facilita a narrativa da marca — cada slide pode contar uma parte da história da empresa.</li>
+          <li>Permite destacar promoções, lançamentos ou diferenciais de forma organizada e com hierarquia clara.</li>
+        </ul>
+      </div>
+
+      <!-- Pergunta 2 -->
+      <div class="ia-pergunta">
+        <h3>
+          <i class="fa-solid fa-circle-question"></i>
+          Como estilizar os botões do slideshow?
+        </h3>
+        <ul>
+          <li>Use <code>position: absolute</code> com <code>top: 50%; transform: translateY(-50%)</code> para centralizá-los verticalmente sobre o slide.</li>
+          <li>Defina <code>z-index</code> alto o suficiente para que os botões fiquem acima das imagens ou conteúdos do slide.</li>
+          <li>Aplique <code>transition</code> no CSS para criar efeitos suaves ao passar o mouse (hover), alterando cor de fundo, borda ou escala.</li>
+          <li>Garanta uma área de clique mínima de 44 × 44px para facilitar o toque em dispositivos móveis (recomendação WCAG 2.1).</li>
+          <li>Use bordas arredondadas (<code>border-radius: 50%</code>) para um visual moderno em formato circular.</li>
+        </ul>
+      </div>
+
+      <!-- Pergunta 3 -->
+      <div class="ia-pergunta">
+        <h3>
+          <i class="fa-solid fa-circle-question"></i>
+          Quais erros comuns podem ocorrer na codificação do slideshow?
+        </h3>
+        <ul>
+          <li><strong>Índice fora do intervalo:</strong> sem verificar os limites do array de slides, o código pode tentar exibir um índice inexistente. Solução: verificar se o índice é menor que 0 ou maior/igual ao total de slides antes de exibir.</li>
+          <li><strong>Múltiplos setInterval simultâneos:</strong> chamar <code>setInterval</code> sem antes executar <code>clearInterval</code> faz o slideshow acelerar a cada clique no botão de automático.</li>
+          <li><strong>Slides sobrepostos:</strong> esquecer de ocultar todos os slides (<code>display: none</code>) antes de mostrar o atual faz com que dois slides apareçam ao mesmo tempo.</li>
+          <li><strong>Conflito com classes W3.CSS:</strong> a classe <code>w3-animate-opacity</code> é aplicada no HTML e não precisa ser removida via JavaScript; tentar manipulá-la pode causar piscadas ou comportamentos inesperados.</li>
+          <li><strong>Falta de acessibilidade:</strong> botões sem atributo <code>aria-label</code> ou <code>title</code> prejudicam o uso por leitores de tela; sempre descreva a ação do botão.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Rodapé geral do site -->
+  <footer class="rodape-site" id="rodape-site">
+    &copy; 2025 TechNova Solutions &mdash; Todos os direitos reservados.
+    &nbsp;|&nbsp; Desenvolvido com HTML5, W3.CSS e JavaScript.
+  </footer>
+
+</main><!-- /conteudo -->
+
+
+<!--
+  =====================================================
+  JAVASCRIPT — script.js
+  Carregado no final do body para garantir que o DOM
+  já esteja pronto antes de executar qualquer função.
+  =====================================================
+-->
+<script src="script.js"></script>
+
+</body>
+</html>

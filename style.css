@@ -1,0 +1,676 @@
+/* =====================================================
+   estilo.css — TechNova Solutions
+   Desenvolvido por: [Seu Nome]
+   Agenda 16 — Desenvolvimento de Sistemas I
+   Uso de framework: W3.CSS + CSS personalizado
+===================================================== */
+
+/* ---------- fonte e reset básico ---------- */
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #f7f5f2;
+  color: #2d2d2d;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- sidebar ---------- */
+.sidebar {
+  height: 100%;
+  width: 210px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background-color: #2b2b2b;
+  padding-top: 20px;
+}
+
+.sidebar-logo {
+  text-align: center;
+  padding: 16px 20px 24px;
+  border-bottom: 1px solid #3d3d3d;
+  margin-bottom: 10px;
+}
+
+.sidebar-logo span {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #e8c87a;
+  display: block;
+  letter-spacing: 1px;
+}
+
+.sidebar-logo small {
+  font-size: 0.7rem;
+  color: #888;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* links do menu */
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 22px;
+  text-decoration: none;
+  font-size: 0.88rem;
+  color: #aaa;
+  transition: background 0.2s, color 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.sidebar a:hover,
+.sidebar a.ativo {
+  background-color: #333;
+  color: #e8c87a;
+  border-left-color: #e8c87a;
+}
+
+.sidebar a i {
+  width: 16px;
+  text-align: center;
+}
+
+/* ---------- conteúdo principal ---------- */
+.conteudo {
+  margin-left: 210px;
+  min-height: 100vh;
+}
+
+/* ---------- seções ---------- */
+.secao {
+  display: none;
+  min-height: 100vh;
+}
+
+.secao.ativa {
+  display: block;
+}
+
+/* ---------- HERO / HOME ---------- */
+.hero {
+  background-color: #2b2b2b;
+  color: #f7f5f2;
+  padding: 100px 70px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-inner {
+  max-width: 600px;
+}
+
+.hero-tag {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e8c87a;
+  margin-bottom: 18px;
+}
+
+.hero-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  line-height: 1.15;
+  color: #f7f5f2;
+  margin-bottom: 20px;
+}
+
+.hero-titulo em {
+  color: #e8c87a;
+  font-style: normal;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: #aaa;
+  line-height: 1.8;
+  margin-bottom: 36px;
+  max-width: 480px;
+}
+
+.btn-primario {
+  display: inline-block;
+  padding: 13px 30px;
+  background-color: #e8c87a;
+  color: #2b2b2b;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-primario:hover {
+  background-color: #d4af62;
+  transform: translateY(-1px);
+}
+
+/* ---------- títulos de seção ---------- */
+.sec-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #2b2b2b;
+  margin-bottom: 6px;
+}
+
+.sec-linha {
+  width: 48px;
+  height: 3px;
+  background-color: #e8c87a;
+  margin-bottom: 36px;
+}
+
+/* ---------- SOBRE ---------- */
+#sobre {
+  padding: 80px 70px;
+  background-color: #f7f5f2;
+}
+
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.sobre-texto p {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.numeros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.numero-item {
+  background-color: #fff;
+  border: 1px solid #e5e1db;
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+}
+
+.numero-valor {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #2b2b2b;
+  display: block;
+}
+
+.numero-label {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* ---------- CABEÇALHO DA SEÇÃO SERVIÇOS ---------- */
+.servicos-cabecalho {
+  background-color: #2b2b2b;
+  padding: 44px 70px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-icone {
+  font-size: 2.8rem;
+  color: #e8c87a;
+}
+
+.servicos-cabecalho h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #f7f5f2;
+  margin: 0 0 4px;
+}
+
+.servicos-cabecalho .slogan {
+  font-size: 0.88rem;
+  color: #aaa;
+  font-style: italic;
+  margin: 0;
+}
+
+/* ---------- SLIDESHOW ---------- */
+.slideshow-area {
+  padding: 60px 70px 40px;
+  background-color: #f7f5f2;
+}
+
+.slideshow-area > h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #2b2b2b;
+  margin-bottom: 4px;
+}
+
+.slideshow-area > p {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 28px;
+}
+
+/* container do slideshow */
+.slide-container {
+  position: relative;
+  max-width: 860px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e5e1db;
+  background-color: #fff;
+}
+
+/* cada slide */
+.slide {
+  display: none;
+}
+
+.slide-corpo {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 340px;
+}
+
+/* visual/ícone do slide */
+.slide-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 30px;
+}
+
+.slide-visual i {
+  font-size: 4rem;
+}
+
+.slide-visual span {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* cores dos slides - simples, sem neon */
+.cor-dourado  { background-color: #fdf3dc; color: #7a5c1e; }
+.cor-verde    { background-color: #dff0e6; color: #2a6644; }
+.cor-roxo     { background-color: #ede8f5; color: #4a2d7a; }
+.cor-azul     { background-color: #deeaf7; color: #1a447a; }
+
+/* texto do slide */
+.slide-texto {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid #e5e1db;
+}
+
+.slide-categoria {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.slide-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #2b2b2b;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.slide-descricao {
+  font-size: 0.88rem;
+  color: #666;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.slide-preco {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #2b2b2b;
+}
+
+.slide-preco small {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.75rem;
+  color: #aaa;
+  display: block;
+  margin-top: 2px;
+  font-style: italic;
+}
+
+/* número do slide */
+.slide-num {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 0.72rem;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+/* ---- botões do slideshow ---- */
+.btn-slide {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.9);
+  border: 1px solid #e5e1db;
+  color: #2b2b2b;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, box-shadow 0.2s;
+  z-index: 10;
+}
+
+.btn-slide:hover {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.btn-slide.anterior { left: 10px; }
+.btn-slide.proximo  { right: 10px; }
+
+/* dots */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  padding: 0;
+}
+
+.dot.ativo,
+.dot:hover {
+  background-color: #e8c87a;
+  transform: scale(1.3);
+}
+
+/* controles auto/manual */
+.controles-slide {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-ctrl {
+  padding: 8px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: transparent;
+  color: #555;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.82rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-ctrl:hover,
+.btn-ctrl.ligado {
+  background-color: #2b2b2b;
+  border-color: #2b2b2b;
+  color: #e8c87a;
+}
+
+/* ---------- RODAPÉ DA SEÇÃO SERVIÇOS ---------- */
+.servicos-rodape {
+  background-color: #2b2b2b;
+  padding: 28px 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.rodape-contato span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #aaa;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.rodape-contato i { color: #e8c87a; }
+
+.rodape-contato a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.rodape-contato a:hover { color: #e8c87a; }
+
+.redes-sociais {
+  display: flex;
+  gap: 10px;
+}
+
+.redes-sociais a {
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+  background-color: #3a3a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  border: 1px solid #444;
+}
+
+.redes-sociais a:hover {
+  background-color: #e8c87a;
+  color: #2b2b2b;
+  border-color: #e8c87a;
+}
+
+/* ---------- CONTATO ---------- */
+#contato {
+  padding: 80px 70px;
+  background-color: #fff;
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 60px;
+}
+
+.info-contato-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.info-icone {
+  width: 40px;
+  height: 40px;
+  background-color: #f7f5f2;
+  border: 1px solid #e5e1db;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e8c87a;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.info-rotulo {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #aaa;
+  margin-bottom: 3px;
+}
+
+.info-valor {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.info-valor a { color: #333; text-decoration: none; }
+.info-valor a:hover { color: #e8c87a; }
+
+/* formulário */
+.grupo-campo {
+  margin-bottom: 18px;
+}
+
+.grupo-campo label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  margin-bottom: 7px;
+}
+
+.grupo-campo input,
+.grupo-campo textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fafafa;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.grupo-campo input:focus,
+.grupo-campo textarea:focus {
+  border-color: #e8c87a;
+  background: #fff;
+}
+
+.grupo-campo textarea { height: 110px; resize: none; }
+
+.btn-enviar {
+  width: 100%;
+  padding: 13px;
+  background-color: #2b2b2b;
+  color: #e8c87a;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-enviar:hover { background-color: #3d3d3d; }
+
+/* ---------- CONSULTA IA ---------- */
+#ia {
+  padding: 80px 70px;
+  background-color: #f7f5f2;
+}
+
+.ia-pergunta {
+  background-color: #fff;
+  border: 1px solid #e5e1db;
+  border-left: 4px solid #e8c87a;
+  border-radius: 6px;
+  padding: 28px 30px;
+  margin-bottom: 22px;
+}
+
+.ia-pergunta h3 {
+  font-size: 0.95rem;
+  color: #2b2b2b;
+  margin-bottom: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ia-pergunta h3 i { color: #e8c87a; }
+
+.ia-pergunta p,
+.ia-pergunta ul {
+  font-size: 0.88rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+.ia-pergunta ul { padding-left: 18px; }
+.ia-pergunta ul li { margin-bottom: 4px; }
+.ia-pergunta code { background: #f0ece6; padding: 1px 6px; border-radius: 3px; color: #555; font-size: 0.82rem; }
+
+/* ---------- RODAPÉ DO SITE ---------- */
+.rodape-site {
+  background-color: #1e1e1e;
+  padding: 20px 70px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+  display: none;
+}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 860px) {
+  .sidebar { width: 56px; }
+  .sidebar a span { display: none; }
+  .sidebar-logo span, .sidebar-logo small { display: none; }
+  .conteudo { margin-left: 56px; }
+
+  .hero { padding: 60px 30px; }
+  .sobre-grid, .contato-grid { grid-template-columns: 1fr; }
+  .slide-corpo { grid-template-columns: 1fr; }
+  .slide-visual { min-height: 160px; }
+  #sobre, #contato, #ia { padding: 50px 24px; }
+  .slideshow-area, .servicos-cabecalho, .servicos-rodape { padding-left: 24px; padding-right: 24px; }
+}
